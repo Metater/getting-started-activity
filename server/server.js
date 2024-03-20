@@ -9,8 +9,14 @@ const port = 3001;
 // Allow express to parse JSON bodies
 app.use(express.json());
 
+app.get("/api/btc-price", async (_req, res) => {
+  const data = await fetch(`https://api.coinbase.com/v2/prices/BTC-USD/spot`).then((response) => response.json());
+  res.send(data);
+  console.log(data);
+});
+
 app.post("/api/token", async (req, res) => {
-  
+
   // Exchange the code for an access_token
   const response = await fetch(`https://discord.com/api/oauth2/token`, {
     method: "POST",
@@ -29,7 +35,7 @@ app.post("/api/token", async (req, res) => {
   const { access_token } = await response.json();
 
   // Return the access_token to our client as { access_token: "..."}
-  res.send({access_token});
+  res.send({ access_token });
 });
 
 app.listen(port, () => {
