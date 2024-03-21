@@ -7,13 +7,13 @@
   <title>Unity WebGL Player | Activities Testing</title>
 </head>
 
-<body style="text-align: center; padding: 0; border: 0; margin: 0;">
+<body style="text-align: center; padding: 0; border: 0; margin: 0px;">
   <div id="app"></div>
   <script type="module" src="/main.js"></script>
 
-  <canvas id="unity-canvas" width=960 height=600 tabindex="-1"
-    style="width: 960px; height: 600px; background: #231F20"></canvas>
-  <script src="Build/1.loader.js"></script>
+  <canvas id="unity-canvas" tabindex="-1"
+    style="background: #231F20; width: 100vw; height: 100vh; position: absolute; left: 50%; right: 50%; transform: translate(-50%, 0%);"></canvas>
+  <script src="Build/AT.loader.js"></script>
   <script>
     if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
       // Mobile device style: fill the whole browser client area with the game canvas:
@@ -31,9 +31,9 @@
     }
 
     createUnityInstance(document.querySelector("#unity-canvas"), {
-      dataUrl: "Build/1.data.br",
-      frameworkUrl: "Build/1.framework.js.br",
-      codeUrl: "Build/1.wasm.br",
+      dataUrl: "Build/AT.data.br",
+      frameworkUrl: "Build/AT.framework.js.br",
+      codeUrl: "Build/AT.wasm.br",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "DefaultCompany",
       productName: "Activities Testing",
