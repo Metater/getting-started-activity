@@ -13,9 +13,9 @@ setupDiscordSdk().then(() => {
 
   // We can now make API calls within the scopes we requested in setupDiscordSDK()
   // Note: the access_token returned is a sensitive secret and should be treated as such
-  appendVoiceChannelName();
+  // appendVoiceChannelName();
   // appendGuildAvatar();
-  appendBtcPrice();
+  // appendBtcPrice();
 });
 
 async function setupDiscordSdk() {
@@ -119,15 +119,9 @@ async function appendGuildAvatar() {
   }
 }
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <img src="${rocketLogo}" class="logo" alt="Discord" />
-    <h1>Hello, World!</h1>
-  </div>
-`;
-
 // document.querySelector('#app').innerHTML = `
-// <div>
-// <iframe id="0" src="/test"></iframe>
-// </div>
+//   <div>
+//     <img src="${rocketLogo}" class="logo" alt="Discord" />
+//     <h1>Hello, World!</h1>
+//   </div>
 // `;
