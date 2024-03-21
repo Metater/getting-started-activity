@@ -7,12 +7,15 @@
   <title>Unity WebGL Player | Activities Testing</title>
 </head>
 
-<body style="text-align: center; padding: 0; border: 0; margin: 0px;">
+<body style="text-align: center; padding: 0; border: 0; margin: 0;">
   <div id="app"></div>
   <script type="module" src="/main.js"></script>
 
-  <canvas id="unity-canvas" tabindex="-1"
-    style="background: #231F20; width: 100vw; height: 100vh; position: absolute; left: 50%; right: 50%; transform: translate(-50%, 0%);"></canvas>
+  <canvas id="unity-canvas" tabindex="-1" style="background: #231F20;
+    width: 100vw; height: 100vh;
+    position: absolute; left: 50%; right: 50%;
+    transform: translate(-50%, 0%);
+    outline: 0;"></canvas>
   <script src="Build/AT.loader.js"></script>
   <script>
     if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
